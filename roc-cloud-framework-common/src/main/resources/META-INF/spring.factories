@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.roc.cloud.common.filter.TenantFilter,\
+com.roc.cloud.common.scheduler.XxlJobAutoConfig
