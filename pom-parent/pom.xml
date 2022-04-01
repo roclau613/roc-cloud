@@ -595,19 +595,4 @@
         </repository>
     </repositories>
 
-
-    <distributionManagement>
-        <repository>
-            <id>maven-releases</id>
-            <name>releases Repository</name>
-            <url>http://mavennb.roc.com:8081/repository/maven-releases/</url>
-        </repository>
-
-        <snapshotRepository>
-            <id>maven-snapshots</id>
-            <url>http://mavennb.roc.com:8081/repository/maven-snapshots/</url>
-            <uniqueVersion>true</uniqueVersion>
-        </snapshotRepository>
-    </distributionManagement>
-
 </project>
