@@ -1,4 +1,4 @@
-package com.roc.cloud.common.advice;
+package com.roc.cloud.core.advice;
 
 public class WebhookBodyDto {
     /**

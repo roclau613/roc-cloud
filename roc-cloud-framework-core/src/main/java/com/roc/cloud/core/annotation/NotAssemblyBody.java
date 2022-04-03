@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.roc.cloud.common.annotation;
+package com.roc.cloud.core.annotation;
 
 
 import java.lang.annotation.ElementType;

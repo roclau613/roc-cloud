@@ -1,4 +1,4 @@
-package com.roc.cloud.common.config;
+package com.roc.cloud.core.config;
 
 import com.github.pagehelper.PageInterceptor;
 import org.springframework.context.annotation.Bean;

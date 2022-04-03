@@ -1,10 +1,10 @@
-package com.roc.cloud.common.config;
+package com.roc.cloud.core.config;
 
 import com.nepxion.banner.BannerConstant;
 import com.nepxion.banner.Description;
 import com.nepxion.banner.LogoBanner;
 import com.taobao.text.Color;
-import com.roc.cloud.common.constant.CommonCoreConstant;
+import com.roc.cloud.core.constant.CommonCoreConstant;
 import com.roc.cloud.common.utils.CustomBanner;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;

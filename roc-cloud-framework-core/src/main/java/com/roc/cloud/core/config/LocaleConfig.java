@@ -1,4 +1,4 @@
-package com.roc.cloud.common.config;
+package com.roc.cloud.core.config;
 
 import java.util.Locale;
 import org.springframework.context.annotation.Bean;

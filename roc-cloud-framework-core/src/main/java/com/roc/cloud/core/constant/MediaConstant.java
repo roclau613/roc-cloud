@@ -1,4 +1,4 @@
-package com.roc.cloud.common.constant;
+package com.roc.cloud.core.constant;
 
 /**
  * 媒体元素默认常量类

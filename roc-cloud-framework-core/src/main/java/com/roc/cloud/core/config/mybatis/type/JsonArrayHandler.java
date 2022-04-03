@@ -1,4 +1,4 @@
-package com.roc.cloud.common.config.mybatis.type;
+package com.roc.cloud.core.config.mybatis.type;
 
 import com.alibaba.fastjson.JSONArray;
 import java.sql.CallableStatement;

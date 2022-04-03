@@ -1,4 +1,4 @@
-package com.roc.cloud.common.constant;
+package com.roc.cloud.core.constant;
 
 /**
  * <p>
