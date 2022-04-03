@@ -104,11 +104,11 @@
     <dependencyManagement>
         <dependencies>
 
-            <dependency>
-                <groupId>org.codehaus.janino</groupId>
-                <artifactId>janino</artifactId>
-                <version>3.0.6</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.codehaus.janino</groupId>-->
+<!--                <artifactId>janino</artifactId>-->
+<!--                <version>3.1.6</version>-->
+<!--            </dependency>-->
 
             <dependency>
                 <groupId>com.github.jsqlparser</groupId>
@@ -128,11 +128,11 @@
                 <version>5.1.2</version>
             </dependency>
 
-            <dependency>
-                <groupId>org.perf4j</groupId>
-                <artifactId>perf4j</artifactId>
-                <version>${perf4j.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.perf4j</groupId>-->
+<!--                <artifactId>perf4j</artifactId>-->
+<!--                <version>${perf4j.version}</version>-->
+<!--            </dependency>-->
 
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
@@ -141,22 +141,22 @@
             </dependency>
 
             <!--         skywalking -->
-            <dependency>
-                <groupId>org.apache.skywalking</groupId>
-                <artifactId>apm-toolkit-logback-1.x</artifactId>
-                <version>${skywalking.toolkit.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.skywalking</groupId>
-                <artifactId>apm-toolkit-log4j-2.x</artifactId>
-                <version>${skywalking.toolkit.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.apache.skywalking</groupId>-->
+<!--                <artifactId>apm-toolkit-logback-1.x</artifactId>-->
+<!--                <version>${skywalking.toolkit.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.apache.skywalking</groupId>-->
+<!--                <artifactId>apm-toolkit-log4j-2.x</artifactId>-->
+<!--                <version>${skywalking.toolkit.version}</version>-->
+<!--            </dependency>-->
 
-            <dependency>
-                <groupId>commons-beanutils</groupId>
-                <artifactId>commons-beanutils</artifactId>
-                <version>${commons-beanutils.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>commons-beanutils</groupId>-->
+<!--                <artifactId>commons-beanutils</artifactId>-->
+<!--                <version>${commons-beanutils.version}</version>-->
+<!--            </dependency>-->
 
             <!-- 必须有这个jar 才能提示 -->
             <dependency>
@@ -168,18 +168,18 @@
             </dependency>
 
 
-            <dependency>
-                <groupId>com.fasterxml.jackson.datatype</groupId>
-                <artifactId>jackson-datatype-jsr310</artifactId>
-                <version>2.10.5</version>
-                <scope>compile</scope>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.fasterxml.jackson.datatype</groupId>-->
+<!--                <artifactId>jackson-datatype-jsr310</artifactId>-->
+<!--                <version>2.10.5</version>-->
+<!--                <scope>compile</scope>-->
+<!--            </dependency>-->
 
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.21</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>mysql</groupId>-->
+<!--                <artifactId>mysql-connector-java</artifactId>-->
+<!--                <version>8.0.21</version>-->
+<!--            </dependency>-->
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -187,29 +187,29 @@
                 <version>2.2.9.RELEASE</version>
             </dependency>
 
-            <dependency>
-                <groupId>joda-time</groupId>
-                <artifactId>joda-time</artifactId>
-                <version>${joda-time.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>joda-time</groupId>-->
+<!--                <artifactId>joda-time</artifactId>-->
+<!--                <version>${joda-time.version}</version>-->
+<!--            </dependency>-->
 
-            <dependency>
-                <groupId>com.google.protobuf</groupId>
-                <artifactId>protobuf-java</artifactId>
-                <version>${protobuf-java.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.google.protobuf</groupId>-->
+<!--                <artifactId>protobuf-java</artifactId>-->
+<!--                <version>${protobuf-java.version}</version>-->
+<!--            </dependency>-->
 
-            <dependency>
-                <groupId>com.aliyun.openservices</groupId>
-                <artifactId>aliyun-log-producer</artifactId>
-                <version>${aliyun-log-producer.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.aliyun.openservices</groupId>-->
+<!--                <artifactId>aliyun-log-producer</artifactId>-->
+<!--                <version>${aliyun-log-producer.version}</version>-->
+<!--            </dependency>-->
 
-            <dependency>
-                <groupId>com.aliyun.openservices</groupId>
-                <artifactId>aliyun-log</artifactId>
-                <version>${aliyun-log.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.aliyun.openservices</groupId>-->
+<!--                <artifactId>aliyun-log</artifactId>-->
+<!--                <version>${aliyun-log.version}</version>-->
+<!--            </dependency>-->
 
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
@@ -230,32 +230,32 @@
             </dependency>
 
 
-            <!-- 自定义 starter -->
-            <dependency>
-                <groupId>com.roc.cloud</groupId>
-                <artifactId>roc-cloud-aliyunlog-starter</artifactId>
-                <version>1.2.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.roc.cloud</groupId>
-                <artifactId>roc-cloud-canary-gateway-stater</artifactId>
-                <version>1.2.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.roc.cloud</groupId>
-                <artifactId>roc-cloud-canary-service-stater</artifactId>
-                <version>1.2.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.roc.cloud</groupId>
-                <artifactId>roc-cloud-db-starter</artifactId>
-                <version>1.2.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.roc.cloud</groupId>
-                <artifactId>roc-cloud-elasticsearch-starter</artifactId>
-                <version>1.2.0-SNAPSHOT</version>
-            </dependency>
+<!--            &lt;!&ndash; 自定义 starter &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.roc.cloud</groupId>-->
+<!--                <artifactId>roc-cloud-aliyunlog-starter</artifactId>-->
+<!--                <version>1.2.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.roc.cloud</groupId>-->
+<!--                <artifactId>roc-cloud-canary-gateway-stater</artifactId>-->
+<!--                <version>1.2.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.roc.cloud</groupId>-->
+<!--                <artifactId>roc-cloud-canary-service-stater</artifactId>-->
+<!--                <version>1.2.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.roc.cloud</groupId>-->
+<!--                <artifactId>roc-cloud-db-starter</artifactId>-->
+<!--                <version>1.2.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.roc.cloud</groupId>-->
+<!--                <artifactId>roc-cloud-elasticsearch-starter</artifactId>-->
+<!--                <version>1.2.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>com.roc.cloud</groupId>
                 <artifactId>roc-cloud-framework-common</artifactId>
@@ -266,65 +266,65 @@
                 <artifactId>roc-cloud-framework-core</artifactId>
                 <version>1.2.0-SNAPSHOT</version>
             </dependency>
-            <dependency>
-                <groupId>com.roc.cloud</groupId>
-                <artifactId>roc-cloud-leaf-starter</artifactId>
-                <version>1.2.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.roc.cloud</groupId>
-                <artifactId>roc-cloud-log-starter</artifactId>
-                <version>1.2.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.roc.cloud</groupId>
-                <artifactId>roc-cloud-redis-starter</artifactId>
-                <version>1.2.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.roc.cloud</groupId>
-                <artifactId>roc-cloud-security-starter</artifactId>
-                <version>1.2.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.roc.cloud</groupId>
-                <artifactId>roc-cloud-sentinel-starter</artifactId>
-                <version>1.2.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.roc.cloud</groupId>
-                <artifactId>roc-cloud-swagger2-starter</artifactId>
-                <version>1.2.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>io.jsonwebtoken</groupId>
-                <artifactId>jjwt</artifactId>
-                <version>${jjwt.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.curator</groupId>
-                <artifactId>curator-recipes</artifactId>
-                <version>2.6.0</version>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>log4j</artifactId>
-                        <groupId>log4j</groupId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.roc.cloud</groupId>-->
+<!--                <artifactId>roc-cloud-leaf-starter</artifactId>-->
+<!--                <version>1.2.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.roc.cloud</groupId>-->
+<!--                <artifactId>roc-cloud-log-starter</artifactId>-->
+<!--                <version>1.2.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.roc.cloud</groupId>-->
+<!--                <artifactId>roc-cloud-redis-starter</artifactId>-->
+<!--                <version>1.2.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.roc.cloud</groupId>-->
+<!--                <artifactId>roc-cloud-security-starter</artifactId>-->
+<!--                <version>1.2.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.roc.cloud</groupId>-->
+<!--                <artifactId>roc-cloud-sentinel-starter</artifactId>-->
+<!--                <version>1.2.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.roc.cloud</groupId>-->
+<!--                <artifactId>roc-cloud-swagger2-starter</artifactId>-->
+<!--                <version>1.2.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>io.jsonwebtoken</groupId>-->
+<!--                <artifactId>jjwt</artifactId>-->
+<!--                <version>${jjwt.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.apache.curator</groupId>-->
+<!--                <artifactId>curator-recipes</artifactId>-->
+<!--                <version>2.6.0</version>-->
+<!--                <exclusions>-->
+<!--                    <exclusion>-->
+<!--                        <artifactId>log4j</artifactId>-->
+<!--                        <groupId>log4j</groupId>-->
+<!--                    </exclusion>-->
+<!--                </exclusions>-->
+<!--            </dependency>-->
 
             <!-- druid 官方 starter -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid-spring-boot-starter</artifactId>
-                <version>${druid-starter}</version>
-            </dependency>
-            <!-- mybatis-plus start -->
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>${mybatis-plus-boot-starter.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.alibaba</groupId>-->
+<!--                <artifactId>druid-spring-boot-starter</artifactId>-->
+<!--                <version>${druid-starter}</version>-->
+<!--            </dependency>-->
+<!--            &lt;!&ndash; mybatis-plus start &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.baomidou</groupId>-->
+<!--                <artifactId>mybatis-plus-boot-starter</artifactId>-->
+<!--                <version>${mybatis-plus-boot-starter.version}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-extension</artifactId>
@@ -338,11 +338,11 @@
             </dependency>
 
             <!-- 解决mybatis 和 LocalDateTime 的问题 -->
-            <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis-typehandlers-jsr310</artifactId>
-                <version>1.0.2</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.mybatis</groupId>-->
+<!--                <artifactId>mybatis-typehandlers-jsr310</artifactId>-->
+<!--                <version>1.0.2</version>-->
+<!--            </dependency>-->
 
 
             <!-- 加入spring security spring security oauth2的处理 -->
@@ -357,65 +357,65 @@
             <!--                <version>${security-jwt.version}</version>-->
             <!--            </dependency>-->
             <!-- 在Redis基础上的一个Java实用工具包 -->
-            <dependency>
-                <groupId>org.redisson</groupId>
-                <artifactId>redisson-spring-boot-starter</artifactId>
-                <version>${redisson-starter.version}</version>
-            </dependency>
-            <!-- swagger -->
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger2</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-bean-validators</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.xiaoymin</groupId>
-                <artifactId>swagger-bootstrap-ui</artifactId>
-                <version>${swagger.ui.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.zyplayer</groupId>
-                <artifactId>swagger-mg-ui</artifactId>
-                <version>${swagger.mg.ui.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.zlt2000</groupId>
-                <artifactId>swagger-butler-core</artifactId>
-                <version>${swagger.butler.version}</version>
-            </dependency>
-            <!-- 验证码生成工具 -->
-            <dependency>
-                <groupId>com.github.whvcse</groupId>
-                <artifactId>easy-captcha</artifactId>
-                <version>${easyCaptcha.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.redisson</groupId>-->
+<!--                <artifactId>redisson-spring-boot-starter</artifactId>-->
+<!--                <version>${redisson-starter.version}</version>-->
+<!--            </dependency>-->
+<!--            &lt;!&ndash; swagger &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>io.springfox</groupId>-->
+<!--                <artifactId>springfox-swagger2</artifactId>-->
+<!--                <version>${swagger.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>io.springfox</groupId>-->
+<!--                <artifactId>springfox-bean-validators</artifactId>-->
+<!--                <version>${swagger.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>io.springfox</groupId>-->
+<!--                <artifactId>springfox-swagger-ui</artifactId>-->
+<!--                <version>${swagger.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.github.xiaoymin</groupId>-->
+<!--                <artifactId>swagger-bootstrap-ui</artifactId>-->
+<!--                <version>${swagger.ui.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.zyplayer</groupId>-->
+<!--                <artifactId>swagger-mg-ui</artifactId>-->
+<!--                <version>${swagger.mg.ui.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.github.zlt2000</groupId>-->
+<!--                <artifactId>swagger-butler-core</artifactId>-->
+<!--                <version>${swagger.butler.version}</version>-->
+<!--            </dependency>-->
+<!--            &lt;!&ndash; 验证码生成工具 &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.github.whvcse</groupId>-->
+<!--                <artifactId>easy-captcha</artifactId>-->
+<!--                <version>${easyCaptcha.version}</version>-->
+<!--            </dependency>-->
             <!-- hutool java工具类库  -->
             <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.aliyun.oss</groupId>
-                <artifactId>aliyun-sdk-oss</artifactId>
-                <version>${aliyun-sdk-oss}</version>
-            </dependency>
-            <!-- 七牛依赖 -->
-            <dependency>
-                <groupId>com.qiniu</groupId>
-                <artifactId>qiniu-java-sdk</artifactId>
-                <version>${qiniu-java-sdk}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.aliyun.oss</groupId>-->
+<!--                <artifactId>aliyun-sdk-oss</artifactId>-->
+<!--                <version>${aliyun-sdk-oss}</version>-->
+<!--            </dependency>-->
+<!--            &lt;!&ndash; 七牛依赖 &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.qiniu</groupId>-->
+<!--                <artifactId>qiniu-java-sdk</artifactId>-->
+<!--                <version>${qiniu-java-sdk}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi</artifactId>
@@ -433,56 +433,56 @@
                 <version>${easypoi.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>de.codecentric</groupId>
-                <artifactId>spring-boot-admin-starter-server</artifactId>
-                <version>${spring-boot-admin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.velocity</groupId>
-                <artifactId>velocity</artifactId>
-                <version>${velocity.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-configuration2</artifactId>
-                <version>${commons-configuration2.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.codingapi.txlcn</groupId>
-                <artifactId>txlcn-tm</artifactId>
-                <version>${txlcn.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.codingapi.txlcn</groupId>
-                <artifactId>txlcn-tc</artifactId>
-                <version>${txlcn.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.codingapi.txlcn</groupId>
-                <artifactId>txlcn-txmsg-netty</artifactId>
-                <version>${txlcn.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.shardingsphere</groupId>
-                <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
-                <version>${sharding-sphere.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.tobato</groupId>
-                <artifactId>fastdfs-client</artifactId>
-                <version>${fastdfs-client.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.roc.cloud</groupId>
-                <artifactId>search-client</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>eu.bitwalker</groupId>
-                <artifactId>UserAgentUtils</artifactId>
-                <version>${userAgent.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>de.codecentric</groupId>-->
+<!--                <artifactId>spring-boot-admin-starter-server</artifactId>-->
+<!--                <version>${spring-boot-admin.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.apache.velocity</groupId>-->
+<!--                <artifactId>velocity</artifactId>-->
+<!--                <version>${velocity.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.apache.commons</groupId>-->
+<!--                <artifactId>commons-configuration2</artifactId>-->
+<!--                <version>${commons-configuration2.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.codingapi.txlcn</groupId>-->
+<!--                <artifactId>txlcn-tm</artifactId>-->
+<!--                <version>${txlcn.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.codingapi.txlcn</groupId>-->
+<!--                <artifactId>txlcn-tc</artifactId>-->
+<!--                <version>${txlcn.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.codingapi.txlcn</groupId>-->
+<!--                <artifactId>txlcn-txmsg-netty</artifactId>-->
+<!--                <version>${txlcn.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>io.shardingsphere</groupId>-->
+<!--                <artifactId>sharding-jdbc-spring-boot-starter</artifactId>-->
+<!--                <version>${sharding-sphere.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.github.tobato</groupId>-->
+<!--                <artifactId>fastdfs-client</artifactId>-->
+<!--                <version>${fastdfs-client.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.roc.cloud</groupId>-->
+<!--                <artifactId>search-client</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>eu.bitwalker</groupId>-->
+<!--                <artifactId>UserAgentUtils</artifactId>-->
+<!--                <version>${userAgent.version}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>transmittable-thread-local</artifactId>
@@ -493,11 +493,11 @@
                 <artifactId>banner</artifactId>
                 <version>${banner.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.springframework.social</groupId>
-                <artifactId>spring-social-security</artifactId>
-                <version>${spring-social-security.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.social</groupId>-->
+<!--                <artifactId>spring-social-security</artifactId>-->
+<!--                <version>${spring-social-security.version}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
@@ -508,36 +508,36 @@
                 <artifactId>javax.servlet-api</artifactId>
                 <version>${servlet-api.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.springframework.data</groupId>
-                <artifactId>spring-data-elasticsearch</artifactId>
-                <version>${spring-data-elasticsearch.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.elasticsearch.client</groupId>
-                <artifactId>elasticsearch-rest-high-level-client</artifactId>
-                <version>${elasticsearch.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.elasticsearch.client</groupId>
-                <artifactId>elasticsearch-rest-client</artifactId>
-                <version>${elasticsearch.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.elasticsearch</groupId>
-                <artifactId>elasticsearch</artifactId>
-                <version>${elasticsearch.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.xiaoymin</groupId>
-                <artifactId>knife4j-spring-boot-starter</artifactId>
-                <version>${knife4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.xiaoymin</groupId>
-                <artifactId>knife4j-micro-spring-boot-starter</artifactId>
-                <version>${knife4j.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.data</groupId>-->
+<!--                <artifactId>spring-data-elasticsearch</artifactId>-->
+<!--                <version>${spring-data-elasticsearch.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.elasticsearch.client</groupId>-->
+<!--                <artifactId>elasticsearch-rest-high-level-client</artifactId>-->
+<!--                <version>${elasticsearch.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.elasticsearch.client</groupId>-->
+<!--                <artifactId>elasticsearch-rest-client</artifactId>-->
+<!--                <version>${elasticsearch.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.elasticsearch</groupId>-->
+<!--                <artifactId>elasticsearch</artifactId>-->
+<!--                <version>${elasticsearch.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.github.xiaoymin</groupId>-->
+<!--                <artifactId>knife4j-spring-boot-starter</artifactId>-->
+<!--                <version>${knife4j.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.github.xiaoymin</groupId>-->
+<!--                <artifactId>knife4j-micro-spring-boot-starter</artifactId>-->
+<!--                <version>${knife4j.version}</version>-->
+<!--            </dependency>-->
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -562,37 +562,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>${spring-boot-dependencies.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>com.spotify</groupId>
-                    <artifactId>docker-maven-plugin</artifactId>
-                    <version>${docker-maven-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-help-plugin</artifactId>
-                    <version>3.1.0</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
-
-    <repositories>
-        <repository>
-            <id>aliyun-repos</id>
-            <url>https://maven.aliyun.com/repository/public</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
 
 </project>
