@@ -1,0 +1,1 @@
+package com.roc.cloud.db.common;/** * 数据库脱敏，固定key（验证类型枚举） * @ClassName: CryptTypeEnum * @Description: 租户模式. * @author: Roc * @date: 2020/9/22 20:27 **/public enum CryptTypeEnum {    /** AES加密（这个可是加密，不是脱敏） */    AES,    /** 手机号 */    @Deprecated    PhoneNumber,    /** 身份证 */    @Deprecated    IdCard,    @Deprecated    /** 银行卡 */            BankCard}

@@ -1,0 +1,10 @@
+org.springframework.context.ApplicationContextInitializer=\
+com.roc.cloud.log.config.TtlMdcAdapterInitializer
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.roc.cloud.log.config.LogAutoConfigure,\
+com.roc.cloud.log.service.impl.LoggerAuditServiceImpl,\
+com.roc.cloud.log.service.impl.EsAuditServiceImpl,\
+com.roc.cloud.log.service.impl.DbAuditServiceImpl,\
+com.roc.cloud.log.utils.LogSyncUtils,\
+com.roc.cloud.log.aspect.AuditLogAspect

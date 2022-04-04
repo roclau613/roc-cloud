@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.roc.cloud.leaf.LeafAutoConfiguration,\
+com.roc.cloud.leaf.feign.fallback.LeafClientFallbackFactory

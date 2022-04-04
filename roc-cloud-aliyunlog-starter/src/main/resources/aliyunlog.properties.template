@@ -1,0 +1,10 @@
+# 这个文件里配置基础公共配置，如aliyin log服务的账号信息等，这些配置都可以在业务应用里使用spring boot的配置覆盖
+#项目名称
+name=xgj-xzt-service-projcet
+#存储地
+logstore=serverl-log
+#日志服务地址
+endpoint=cn-hangzhou.log.aliyuncs.com
+accessKeyId=
+accessKeySecret=
+userAgent=

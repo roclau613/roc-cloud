@@ -10,9 +10,8 @@ package com.roc.cloud.core.constant;
  */
 public class SecurityConstants {
 
-    public static final String X3_AUTH_HEADER = "x3-authentication";
 
-    public static final String X3_LOGIN_HEADER = "x3-login";
+    public static final String ROC_LOGIN_HEADER = "roc-login";
 
     /**
      * 用户信息分隔符

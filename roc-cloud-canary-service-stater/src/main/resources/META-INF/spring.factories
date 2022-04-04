@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.roc.cloud.canary.ribbon.nacos.config.CanaryGlobalLoadBalanceConfig
+

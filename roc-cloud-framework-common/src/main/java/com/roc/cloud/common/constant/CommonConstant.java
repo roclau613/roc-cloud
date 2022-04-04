@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 全局公共常量
  *
- * @author: Frank
+ * @author: Roc
  * @date 2018/10/29
  */
 public class CommonConstant {

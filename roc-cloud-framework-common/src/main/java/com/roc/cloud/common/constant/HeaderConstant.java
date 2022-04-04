@@ -11,7 +11,7 @@ public interface HeaderConstant {
     /**
      * 租户id信息头
      */
-    String TENANT_ID_HEADER = "x3-tenantId";
+    String TENANT_ID_HEADER = "roc-tenantId";
     /**
      * 请求机构id信息头
      */
@@ -28,10 +28,10 @@ public interface HeaderConstant {
     /**
      * 头部灰度版本号key，统一入口由网关+机构/租户中心配置，配置中心的元数据的matedate保持一致
      */
-    String CANARY_VERSION_HEADER = "x3-version";
+    String CANARY_VERSION_HEADER = "roc-version";
 
     /**
      * 如果请求IP不为空优先走IP可用实例
      */
-    String CANARY_REQUESTIP_HEADER = "x3-request-ip";
+    String CANARY_REQUESTIP_HEADER = "roc-request-ip";
 }

@@ -2,6 +2,10 @@ package com.roc.cloud.core.advice;
 
 import cn.hutool.http.HttpUtil;
 import com.alibaba.fastjson.JSONObject;
+import com.roc.cloud.core.exception.IdempotencyException;
+import com.roc.cloud.core.exception.PlatformApiException;
+import com.roc.cloud.core.exception.ServiceException;
+import com.roc.cloud.core.model.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.exception.ExceptionUtils;
@@ -25,7 +29,7 @@ import java.util.Objects;
 /**
  * 异常通用处理
  *
- * @author: Frank
+ * @author: Roc
  */
 @Slf4j
 @ControllerAdvice
@@ -143,8 +147,8 @@ public class DefaultExceptionAdvice {
      */
     @ResponseBody
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    @ExceptionHandler(X3ApiException.class)
-    public Result handleException(HttpServletRequest request, X3ApiException e) {
+    @ExceptionHandler(PlatformApiException.class)
+    public Result handleException(HttpServletRequest request, PlatformApiException e) {
         if (Objects.equals(1, e.getErrLevel())) {
             return defErrorHandler(request.getRequestURI(), e.getMessage(), e);
         }
@@ -169,7 +173,7 @@ public class DefaultExceptionAdvice {
      *
      * @param e :
      * @return com.roc.cloud.common.model.Result
-     * @author Frank
+     * @author Roc
      * @date 2020/11/19
      **/
     @ResponseBody

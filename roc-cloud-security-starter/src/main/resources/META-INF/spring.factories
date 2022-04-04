@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.roc.cloud.security.auth.service.impl.JwtTokenServiceImpl

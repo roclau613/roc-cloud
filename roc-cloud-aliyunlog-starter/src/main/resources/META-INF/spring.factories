@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.roc.cloud.log.LogAppenderAutoConfiguration,\
+com.roc.cloud.common.log.config.CommonProjectConfig,\
+cn.hutool.extra.spring.SpringUtil

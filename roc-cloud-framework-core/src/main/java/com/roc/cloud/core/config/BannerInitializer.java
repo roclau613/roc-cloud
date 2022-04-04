@@ -28,9 +28,9 @@ public class BannerInitializer implements ApplicationContextInitializer<Configur
     @Override
     public void initialize(ConfigurableApplicationContext applicationContext) {
         if (!(applicationContext instanceof AnnotationConfigApplicationContext)) {
-            LogoBanner logoBanner = new LogoBanner(BannerInitializer.class, "/x3map/logo.txt", "Welcome to X3 ...", 5, 6, new Color[5], true);
+            LogoBanner logoBanner = new LogoBanner(BannerInitializer.class, "/rocmap/logo.txt", "Welcome to roc ...", 5, 6, new Color[5], true);
             CustomBanner.show(logoBanner, new Description(BannerConstant.VERSION + ":", CommonCoreConstant.PROJECT_VERSION, 0, 1)
-                    , new Description("html:", "https://www.xiaogj.com/index.html", 0, 1)
+                    , new Description("html:", "https://www.roc.com/index.html", 0, 1)
             );
         }
     }

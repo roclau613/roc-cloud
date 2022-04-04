@@ -4,6 +4,9 @@ import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageInfo;
 import com.roc.cloud.core.annotation.NotAssemblyBody;
+import com.roc.cloud.core.helper.CloudPageHelper;
+import com.roc.cloud.core.model.PageResult;
+import com.roc.cloud.core.model.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
@@ -57,7 +60,7 @@ public class DefaultResponseBodyAdvice implements ResponseBodyAdvice {
         } else {
             Result response = Result.succeed();
             try {
-                Boolean pageType = X3PageHelper.getLocalPageType();
+                Boolean pageType = CloudPageHelper.getLocalPageType();
                 if (pageType != null && pageType && result instanceof Page) {
                     PageInfo pageInfo = new PageInfo((Page) result);
                     PageResult page = new PageResult();
@@ -68,7 +71,7 @@ public class DefaultResponseBodyAdvice implements ResponseBodyAdvice {
                 }
                 response.setData(result);
             } finally {
-                X3PageHelper.clearLocalPageType();
+                CloudPageHelper.clearLocalPageType();
             }
 
             if (result instanceof String) {

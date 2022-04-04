@@ -1,0 +1,8 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.roc.cloud.db.config.DynamicDataSourceConfiguration,\
+com.roc.cloud.db.config.TenantMybatisConfiguration,\
+com.roc.cloud.db.config.DbFieldCryptMybatisConfiguration,\
+com.roc.cloud.db.config.FillMybatisConfiguration
+
+org.springframework.boot.autoconfigure.AutoConfigurationImportFilter=\
+com.roc.cloud.db.datasource.ShardingExclusionFilter
