@@ -15,9 +15,9 @@ import java.util.List;
 public class CustomBanner {
     /**
      * show
-    * @param logoBanner : 
- * @param descriptionList :
-     *        
+     *
+     * @param logoBanner      :
+     * @param descriptionList :
      * @return void
      * @author Roc
      * @date 2020/9/30
@@ -27,7 +27,7 @@ public class CustomBanner {
         if (!Boolean.valueOf(bannerShown)) {
             return;
         }
-        
+
         String bannerShownAnsiMode = System.getProperty(BannerConstant.BANNER_SHOWN_ANSI_MODE, "false");
         if (Boolean.valueOf(bannerShownAnsiMode)) {
             System.out.println(logoBanner.getBanner());

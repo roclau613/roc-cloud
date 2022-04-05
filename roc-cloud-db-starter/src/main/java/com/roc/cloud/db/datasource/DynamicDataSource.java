@@ -9,6 +9,7 @@ import com.roc.cloud.db.entity.DataSourceInfo;
 import com.roc.cloud.db.entity.DataSourceMasterSlaveEnum;
 import com.roc.cloud.db.entity.TenantDataSourceInfo;
 import com.roc.cloud.db.tenant.TenantContextHandler;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -22,6 +23,7 @@ import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import javax.sql.DataSource;
+
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shardingsphere.api.config.masterslave.MasterSlaveRuleConfiguration;
 import org.apache.shardingsphere.api.config.sharding.ShardingRuleConfiguration;
@@ -42,19 +44,29 @@ public class DynamicDataSource extends AbstractDynamicDataSource<ShardingDataSou
     private boolean testOnBorrow = false;
     private boolean testOnReturn = false;
 
-    /** 是否打开连接泄露自动检测 */
+    /**
+     * 是否打开连接泄露自动检测
+     */
     private boolean removeAbandoned = false;
-    /** 连接长时间没有使用，被认为发生泄露时长 */
+    /**
+     * 连接长时间没有使用，被认为发生泄露时长
+     */
     private long removeAbandonedTimeoutMillis = 300 * 1000;
-    /** 发生泄露时是否需要输出 log，建议在开启连接泄露检测时开启，方便排错 */
+    /**
+     * 发生泄露时是否需要输出 log，建议在开启连接泄露检测时开启，方便排错
+     */
     private boolean logAbandoned = false;
 
     // 只要maxPoolPreparedStatementPerConnectionSize>0,poolPreparedStatements就会被自动设定为true，使用oracle时可以设定此值。
     // private int maxPoolPreparedStatementPerConnectionSize = -1;
 
-    /** 配置监控统计拦截的filters */
+    /**
+     * 配置监控统计拦截的filters
+     */
     private String filters;
-    /** 监控统计："stat" 防SQL注入："wall" 组合使用： "stat,wall" */
+    /**
+     * 监控统计："stat" 防SQL注入："wall" 组合使用： "stat,wall"
+     */
     private List<Filter> filterList;
 
     private static ExecutorService threadPool = new ThreadPoolExecutor(
@@ -72,7 +84,8 @@ public class DynamicDataSource extends AbstractDynamicDataSource<ShardingDataSou
         Environment environment = getApplicationContext().getEnvironment();
         String property = environment.getProperty("roc.cloud.dynamic.sharding.enabled");
         Boolean shardingEnable = Boolean.valueOf(property);
-        DataSource dataSource = buildDefaultDataSource(tenantDataSourceInfo.getMasterDataSource());;
+        DataSource dataSource = buildDefaultDataSource(tenantDataSourceInfo.getMasterDataSource());
+        ;
         if (shardingEnable) {
             threadPool.execute(() -> {
                 try {
@@ -132,6 +145,7 @@ public class DynamicDataSource extends AbstractDynamicDataSource<ShardingDataSou
 
     /**
      * 创建数据源，这里创建的数据源是带有连接池属性的
+     *
      * @see
      */
     public DruidDataSource buildDefaultDataSource(DataSourceInfo dataSourceInfo) {

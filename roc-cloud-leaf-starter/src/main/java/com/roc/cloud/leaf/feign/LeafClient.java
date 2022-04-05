@@ -17,6 +17,7 @@ public interface LeafClient {
 
     /**
      * 获取serviceId
+     *
      * @param key : 数据库配置的applicationName
      * @return java.lang.String
      * @throws

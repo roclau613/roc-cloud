@@ -1,7 +1,7 @@
 package com.roc.cloud.core.utils;
 
 import com.alibaba.fastjson.JSONObject;
-import com.roc.cloud.common.model.Result;
+import com.roc.cloud.core.model.Result;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.core.io.buffer.DataBufferFactory;
 import org.springframework.core.io.buffer.DataBufferUtils;

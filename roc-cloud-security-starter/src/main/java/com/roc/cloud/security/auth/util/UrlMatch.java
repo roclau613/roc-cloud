@@ -1,6 +1,7 @@
 package com.roc.cloud.security.auth.util;
 
 import java.util.List;
+
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.AntPathMatcher;
@@ -40,7 +41,7 @@ public class UrlMatch {
      * 匹配url
      *
      * @param patternPathList :
-     * @param requestPath :
+     * @param requestPath     :
      * @return boolean
      * @author Roc
      * @date 2020/10/29
@@ -48,7 +49,7 @@ public class UrlMatch {
     public static boolean matchs(List<String> patternPathList, String requestPath) {
         if (CollectionUtils.isNotEmpty(patternPathList)) {
             for (String s : patternPathList) {
-                if (match(s, requestPath)){
+                if (match(s, requestPath)) {
                     return true;
                 }
             }

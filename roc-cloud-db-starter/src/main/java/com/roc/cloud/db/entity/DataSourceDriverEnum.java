@@ -8,11 +8,17 @@ package com.roc.cloud.db.entity;
  **/
 public enum DataSourceDriverEnum {
 
-    /** SQL server */
+    /**
+     * SQL server
+     */
     SQL_SERVER("com.microsoft.sqlserver.jdbc.SQLServerDriver"),
-    /** msyql server 8 */
+    /**
+     * msyql server 8
+     */
     MYSQL_SERVER("com.mysql.cj.jdbc.Driver"),
-    /** oracle server */
+    /**
+     * oracle server
+     */
     ORACLE_SERVER("oracle.jdbc.driver.OracleDriver");
 
     private String driver;

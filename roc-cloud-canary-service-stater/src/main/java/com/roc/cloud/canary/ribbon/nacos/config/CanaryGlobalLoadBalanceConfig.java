@@ -33,7 +33,7 @@ public class CanaryGlobalLoadBalanceConfig {
 
     @Bean
     @ConditionalOnMissingBean(RestTemplate.class)
-    public RestTemplate restTemplate(RestTemplateProperties restTemplateProperties){
+    public RestTemplate restTemplate(RestTemplateProperties restTemplateProperties) {
         log.warn("未找到RestTemplate..初始化默认的RestTemplate");
         SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
         factory.setConnectTimeout(restTemplateProperties.getConnectTimeout());

@@ -1,94 +1,34 @@
 package com.roc.cloud.log.monitor;
 
-import com.alibaba.fastjson.annotation.JSONField;
-import lombok.Getter;
-import lombok.Setter;
-
-import java.time.LocalDateTime;
+import lombok.extern.slf4j.Slf4j;
 
 /**
- * 审计日志
+ * 日志埋点工具类
  *
  * @author: Roc
- * @date 2020/2/3
- * <p>
  */
-@Setter
-@Getter
-public class ExceptionAudit {
+@Slf4j
+public class PointUtil {
+    private static final String MSG_PATTERN = "{}|{}|{}";
+
+    private PointUtil() {
+        throw new IllegalStateException("Utility class");
+    }
 
     /**
-     * 索引名称 对应枚举类EsIndexNameEnum name
+     * 格式为：{时间}|{来源}|{对象id}|{类型}|{对象属性(以&分割)}
+     * 例子1：2016-07-27 23:37:23|business-center|1|user-login|ip=xxx.xxx.xx&userName=张三&userType=后台管理员
+     * 例子2：2016-07-27 23:37:23|file-center|c0a895e114526786450161001d1ed9|file-upload|fileName=xxx&filePath=xxx
+     *
+     * @param id      对象id
+     * @param type    类型
+     * @param message 对象属性
      */
-    private String indexName;
-    /**
-     * 审核ID
-     */
-    private String auditId;
-    /**
-     * 清楚参数
-     */
-    private String params;
-    /**
-     * 应用名称
-     */
-    private String exApplicationName;
+    public static void info(String id, String type, String message) {
+        log.info(MSG_PATTERN, id, type, message);
+    }
 
-    /**
-     * 业务系统名称
-     */
-    private String businessType;
-
-    /**
-     * 类名称
-     */
-    private String exClassName;
-
-    /**
-     * 方法名称
-     */
-    private String exMethodName;
-
-    /**
-     * 机构id
-     */
-    private String companyId;
-
-    /**
-     * 日志渠道类型
-     */
-    private String channelType;
-
-    /**
-     * 用户id
-     */
-    private String userId;
-
-    /**
-     * 用户名称
-     */
-    private String userName;
-
-    /**
-     * 操作名称
-     */
-    private String processName;
-    /**
-     * ip
-     */
-    private String ip;
-
-    /**
-     * 操作时间
-     */
-    private LocalDateTime timestamp;
-    /**
-     * 操作信息
-     */
-    private String operation;
-
-    /**
-     * 异常信息
-     */
-    private  String exceptionMsg;
+    public static void debug(String id, String type, String message) {
+        log.debug(MSG_PATTERN, id, type, message);
+    }
 }

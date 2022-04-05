@@ -10,8 +10,8 @@ public class LockException extends RuntimeException {
 
     /**
      * LockException
-    * @param message :
      *
+     * @param message :
      * @return
      * @author Roc
      * @date 2020/9/30

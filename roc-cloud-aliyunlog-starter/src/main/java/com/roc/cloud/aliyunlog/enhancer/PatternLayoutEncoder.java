@@ -16,7 +16,6 @@ public class PatternLayoutEncoder extends PatternLayoutEncoderBase<ILoggingEvent
 
     /**
      * 启动类
-
      *
      * @return void
      * @author Roc
@@ -34,8 +33,8 @@ public class PatternLayoutEncoder extends PatternLayoutEncoderBase<ILoggingEvent
 
     /**
      * setPatternLayout
-     * @param layout :
      *
+     * @param layout :
      * @return void
      * @author Roc
      * @date 2020/9/30

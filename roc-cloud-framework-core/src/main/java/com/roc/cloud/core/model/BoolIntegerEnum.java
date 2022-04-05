@@ -28,7 +28,6 @@ public enum BoolIntegerEnum {
     String desc;
 
     /**
-     *
      * @param code
      * @param desc
      */
@@ -38,7 +37,6 @@ public enum BoolIntegerEnum {
     }
 
     /**
-     *
      * @return
      */
     public Integer getCode() {
@@ -46,7 +44,6 @@ public enum BoolIntegerEnum {
     }
 
     /**
-     *
      * @param code
      */
     public void setCode(Integer code) {
@@ -54,7 +51,6 @@ public enum BoolIntegerEnum {
     }
 
     /**
-     *
      * @return
      */
     public String getDesc() {
@@ -62,7 +58,6 @@ public enum BoolIntegerEnum {
     }
 
     /**
-     *
      * @param desc
      */
     public void setDesc(String desc) {
@@ -70,7 +65,6 @@ public enum BoolIntegerEnum {
     }
 
     /**
-     *
      * @param code
      * @return
      */
@@ -84,7 +78,6 @@ public enum BoolIntegerEnum {
     }
 
     /**
-     *
      * @param desc
      * @return
      */

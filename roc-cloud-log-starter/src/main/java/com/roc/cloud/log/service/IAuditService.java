@@ -24,8 +24,8 @@ public interface IAuditService {
 
     /**
      * 保存异常日志
-     * @param exceptionAudit :
      *
+     * @param exceptionAudit :
      * @return void
      * @author yw
      * @date 2021/2/2

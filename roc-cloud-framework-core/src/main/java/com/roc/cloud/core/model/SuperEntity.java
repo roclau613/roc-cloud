@@ -23,20 +23,20 @@ public class SuperEntity<T extends Model<?>> extends Model<T> {
     private Long id;
 
     /**
-    * 创建时间
-    **/
+     * 创建时间
+     **/
     @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
     /**
-    * 修改时间
-    **/
+     * 修改时间
+     **/
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 
     /**
-    * 是否删除
-    **/
+     * 是否删除
+     **/
     @TableLogic
     @TableField(fill = FieldFill.INSERT)
     private Boolean deleted;

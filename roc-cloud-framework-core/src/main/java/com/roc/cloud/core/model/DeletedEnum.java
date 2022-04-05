@@ -3,6 +3,7 @@ package com.roc.cloud.core.model;
 
 /**
  * 全局数据记录删除状态枚举类
+ *
  * @author: xdli
  * @since: 1.0
  * @version: 1.0

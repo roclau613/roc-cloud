@@ -1,6 +1,6 @@
 package com.roc.cloud.core.exception;
 
-import com.roc.cloud.common.model.CodeEnum;
+import com.roc.cloud.core.model.CodeEnum;
 import lombok.Data;
 
 /**

@@ -37,7 +37,7 @@ public class RestAutoConfigure {
     /**
      * 异步httpclient连接延时配置
      */
-    private void setRequestConfig(RestClientBuilder builder, RestClientPoolProperties poolProperties){
+    private void setRequestConfig(RestClientBuilder builder, RestClientPoolProperties poolProperties) {
         builder.setRequestConfigCallback(requestConfigBuilder -> {
             requestConfigBuilder.setConnectTimeout(poolProperties.getConnectTimeOut())
                     .setSocketTimeout(poolProperties.getSocketTimeOut())
@@ -49,7 +49,7 @@ public class RestAutoConfigure {
     /**
      * 异步httpclient连接数配置
      */
-    private void setHttpClientConfig(RestClientBuilder builder, RestClientPoolProperties poolProperties, RestClientProperties restProperties){
+    private void setHttpClientConfig(RestClientBuilder builder, RestClientPoolProperties poolProperties, RestClientProperties restProperties) {
         builder.setHttpClientConfigCallback(httpClientBuilder -> {
             httpClientBuilder.setMaxConnTotal(poolProperties.getMaxConnectNum())
                     .setMaxConnPerRoute(poolProperties.getMaxConnectPerRoute());

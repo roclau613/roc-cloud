@@ -1,6 +1,7 @@
 package com.roc.cloud.core.config;
 
 import java.util.Locale;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
@@ -11,6 +12,7 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 /**
  * 国际化LocaleConfig
+ *
  * @date: 2020/10/13
  * @author: xdli
  * @since: 1.0

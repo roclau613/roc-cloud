@@ -2,7 +2,10 @@ package com.roc.cloud.canary.ribbon.nacos.interceptor;
 
 import com.roc.cloud.canary.ribbon.nacos.context.CanaryContext;
 import com.roc.cloud.canary.ribbon.nacos.context.CanaryFilterContextHolder;
+
 import java.io.IOException;
+
+import com.roc.cloud.common.constant.HeaderConstant;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.http.HttpRequest;
@@ -42,8 +45,8 @@ public class CanaryRestInterceptor implements ClientHttpRequestInterceptor {
      * <li>Optionally wrap the response to filter HTTP attributes.</li>
      * </ol>
      *
-     * @param request the request, containing method, URI, and headers
-     * @param body the body of the request
+     * @param request   the request, containing method, URI, and headers
+     * @param body      the body of the request
      * @param execution the request execution
      * @return the response
      * @throws IOException in case of I/O errors
@@ -64,7 +67,7 @@ public class CanaryRestInterceptor implements ClientHttpRequestInterceptor {
             requestWrapper.getHeaders().add(HeaderConstant.TENANT_ID_HEADER, tenantId);
         }
         String requestIp = currentContext.getAttributes().get(HeaderConstant.CANARY_REQUESTIP_HEADER);
-        if (StringUtils.isNotBlank(requestIp)){
+        if (StringUtils.isNotBlank(requestIp)) {
             log.debug("3.CanaryRestInterceptor拦截，设置IP：{}到RestTemplate中", requestIp);
             requestWrapper.getHeaders().add(HeaderConstant.CANARY_REQUESTIP_HEADER, requestIp);
         }

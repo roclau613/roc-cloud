@@ -12,6 +12,7 @@ public interface DataSourceService {
 
     /**
      * 通过租户获取连接信息
+     *
      * @param tenant :
      * @return
      * @throws

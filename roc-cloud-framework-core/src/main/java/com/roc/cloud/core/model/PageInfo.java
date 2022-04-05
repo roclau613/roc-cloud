@@ -23,7 +23,7 @@ public class PageInfo<T> implements Serializable {
     private PageResult page;
     private List<T> data;
 
-    public PageInfo(Page<T> page){
+    public PageInfo(Page<T> page) {
         this.page = new PageResult();
         this.page.setPageNum(page.getPageNum());
         this.page.setTotalCount(Long.valueOf(page.getTotal()).intValue());
@@ -31,7 +31,7 @@ public class PageInfo<T> implements Serializable {
         this.data = page.getResult();
     }
 
-    public PageInfo(Integer pageNum, Integer totalPage, Integer totalCount,  List<T> data){
+    public PageInfo(Integer pageNum, Integer totalPage, Integer totalCount, List<T> data) {
         PageResult pageResult = new PageResult();
         pageResult.setPageNum(pageNum);
         pageResult.setTotalCount(totalCount);

@@ -3,7 +3,9 @@ package com.roc.cloud.db.service.impl;
 import com.roc.cloud.db.entity.TenantDataSourceInfo;
 import com.roc.cloud.dbfeign.CompanyDataSourceClient;
 import com.roc.cloud.db.service.DataSourceService;
+
 import java.text.MessageFormat;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -30,7 +32,6 @@ public class DataSourceServiceImpl implements DataSourceService {
      * 通过租户获取连接信息
      *
      * @param tenant :
-     *
      * @return
      * @throws
      * @author Roc

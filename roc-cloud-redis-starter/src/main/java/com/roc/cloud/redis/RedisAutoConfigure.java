@@ -25,8 +25,6 @@ import java.util.Map;
  * @author: Roc
  * @date 2018/11/6 11:02
  * <p>
-
-
  */
 @EnableConfigurationProperties({RedisProperties.class, CacheManagerProperties.class})
 @EnableCaching
@@ -46,6 +44,7 @@ public class RedisAutoConfigure {
 
     /**
      * RedisTemplate配置
+     *
      * @param factory
      */
     @Bean

@@ -23,7 +23,6 @@ public @interface NotAssemblyBody {
 
     /**
      * 是否需要匹配Result
-
      *
      * @return boolean
      * @author Roc

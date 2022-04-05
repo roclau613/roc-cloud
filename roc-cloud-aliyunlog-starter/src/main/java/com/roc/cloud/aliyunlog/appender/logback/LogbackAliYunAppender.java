@@ -20,6 +20,7 @@ import com.roc.cloud.aliyunlog.appender.AliYunAppenderCallback;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.joda.time.format.DateTimeFormat;
@@ -198,7 +199,7 @@ public class LogbackAliYunAppender<E> extends UnsynchronizedAppenderBase<E> {
 
         if (this.encoder != null) {
             String errorLogText = new String(this.encoder.encode(eventObject));
-            if (LOG_ERROR.equals(level)){
+            if (LOG_ERROR.equals(level)) {
                 if (!StringUtils.isEmpty(errorLogText)) {
                     errorLogText = errorLogText.replaceAll("\"", "");
                 }

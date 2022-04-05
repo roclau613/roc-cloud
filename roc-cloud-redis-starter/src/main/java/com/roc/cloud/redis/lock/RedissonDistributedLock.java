@@ -1,17 +1,20 @@
 package com.roc.cloud.redis.lock;
 
 import java.util.concurrent.TimeUnit;
+
+import com.roc.cloud.core.constant.CommonCoreConstant;
+import com.roc.cloud.core.exception.PlatformApiException;
+import com.roc.cloud.core.lock.DistributedLock;
+import com.roc.cloud.core.lock.ZLock;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 
 /**
- * @description:
- * redisson分布式锁实现，基本锁功能的抽象实现
+ * @description: redisson分布式锁实现，基本锁功能的抽象实现
  * 本接口能满足绝大部分的需求，高级的锁功能，请自行扩展或直接使用原生api
  * https://gitbook.cn/gitchat/activity/5f02746f34b17609e14c7d5a
- *
  * @author: Roc
  * @date 2020/5/5
  * @version: 1.0

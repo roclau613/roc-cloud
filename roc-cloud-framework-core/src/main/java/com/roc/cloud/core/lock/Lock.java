@@ -51,7 +51,7 @@ public @interface Lock {
     String msg() default "您操作太频繁了，休息下。";
 
     /**
-    * 错误码
-    **/
+     * 错误码
+     **/
     int errorCode() default 60000;
 }

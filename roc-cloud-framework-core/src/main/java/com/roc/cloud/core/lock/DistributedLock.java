@@ -30,7 +30,7 @@ public interface DistributedLock {
      * @param leaseTime :
      * @param unit      :
      * @return com.roc.cloud.common.lock.ZLock
-     * @exception Exception 未知异常
+     * @throws Exception 未知异常
      * @author Roc
      * @date 2020/11/19
      **/
@@ -47,7 +47,6 @@ public interface DistributedLock {
      * @throws Exception 未知异常
      * @author Roc
      * @date 2020/11/19
-     *
      **/
     default ZLock lock(String key, boolean isFair) throws Exception {
         return this.lock(key, -1, null, isFair);
@@ -58,7 +57,7 @@ public interface DistributedLock {
      *
      * @param key :
      * @return com.roc.cloud.common.lock.ZLock
-     * @exception Exception 未知异常
+     * @throws Exception 未知异常
      * @author Roc
      * @date 2020/11/19
      **/
@@ -76,7 +75,7 @@ public interface DistributedLock {
      * @param unit      {@code waitTime} 和 {@code leaseTime} 参数的时间单位
      * @param isFair
      * @return 锁对象，如果获取锁失败则为null
-     * @exception Exception 未知异常
+     * @throws Exception 未知异常
      */
     ZLock tryLock(String key, long waitTime, long leaseTime, TimeUnit unit, boolean isFair) throws Exception;
 
@@ -88,7 +87,7 @@ public interface DistributedLock {
      * @param leaseTime :
      * @param unit      :
      * @return com.roc.cloud.common.lock.ZLock
-     * @exception Exception 未知异常
+     * @throws Exception 未知异常
      * @author Roc
      * @date 2020/11/19
      **/
@@ -104,7 +103,7 @@ public interface DistributedLock {
      * @param unit     :
      * @param isFair   :
      * @return com.roc.cloud.common.lock.ZLock
-     * @exception Exception 未知异常
+     * @throws Exception 未知异常
      * @author Roc
      * @date 2020/11/19
      **/
@@ -119,7 +118,7 @@ public interface DistributedLock {
      * @param waitTime :
      * @param unit     :
      * @return com.roc.cloud.common.lock.ZLock
-     * @exception Exception 未知异常
+     * @throws Exception 未知异常
      * @author Roc
      * @date 2020/11/19
      **/
@@ -132,7 +131,7 @@ public interface DistributedLock {
      *
      * @param lock 锁对象
      * @return void
-     * @exception Exception 未知异常
+     * @throws Exception 未知异常
      * @author Roc
      * @date 2020/11/19
      **/
@@ -144,7 +143,7 @@ public interface DistributedLock {
      *
      * @param zLock 锁抽象对象
      * @return void
-     * @exception Exception 未知异常
+     * @throws Exception 未知异常
      * @author Roc
      * @date 2020/11/19
      **/

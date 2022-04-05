@@ -18,13 +18,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class LogSyncUtils {
 
-    private static String mqUrl ;
+    private static String mqUrl;
 
     private static String logMqTopic;
 
-    private static String logMqTag ;
+    private static String logMqTag;
 
-    private static String appId ;
+    private static String appId;
 
     private static String appKey;
 
@@ -55,21 +55,21 @@ public class LogSyncUtils {
 
     /**
      * 发送日志消息到消息中心
-     * @param audit :
      *
+     * @param audit :
      * @return void
      * @author yw
      * @date 2021/1/5
      */
     public static void sendMq(Audit audit) {
-        String messageKey =  audit.getApplicationName() + "_" +audit.getCompanyId()+ "_" +audit.getUserId()+ "_"  +audit.getClassName() + "_" + audit.getMethodName();
+        String messageKey = audit.getApplicationName() + "_" + audit.getCompanyId() + "_" + audit.getUserId() + "_" + audit.getClassName() + "_" + audit.getMethodName();
         String messageContent = JSONObject.toJSONString(audit);
-        MqUtils.sendMq(mqUrl, logMqTopic, logMqTag, messageKey, messageContent,appId,appKey);
+//        MqUtils.sendMq(mqUrl, logMqTopic, logMqTag, messageKey, messageContent,appId,appKey);
     }
 
     public static void sendExceptionMq(ExceptionAudit exceptionAudit) {
-        String messageKey =  "Exception_"+exceptionAudit.getExApplicationName() + "_" +exceptionAudit.getCompanyId()+ "_"+exceptionAudit.getUserId() +"_"+ exceptionAudit.getExClassName() + "_" + exceptionAudit.getExMethodName();
+        String messageKey = "Exception_" + exceptionAudit.getExApplicationName() + "_" + exceptionAudit.getCompanyId() + "_" + exceptionAudit.getUserId() + "_" + exceptionAudit.getExClassName() + "_" + exceptionAudit.getExMethodName();
         String messageContent = JSONObject.toJSONString(exceptionAudit);
-        MqUtils.sendMq(mqUrl, logMqTopic, logMqTag, messageKey, messageContent,appId,appKey);
+//        MqUtils.sendMq(mqUrl, logMqTopic, logMqTag, messageKey, messageContent,appId,appKey);
     }
 }

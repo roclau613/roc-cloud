@@ -13,7 +13,7 @@ import java.lang.annotation.Target;
  * @author: Roc <br>
  * @version: 1.0 <br>
  */
-@Target({ ElementType.FIELD, ElementType.PARAMETER, ElementType.METHOD })
+@Target({ElementType.FIELD, ElementType.PARAMETER, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface CryptField {
     CryptTypeEnum value() default CryptTypeEnum.AES;

@@ -18,8 +18,7 @@ public class CryptContext {
     /**
      * 获取加密方式
      *
-     * @param cryptTypeEnum
-     *            加密方式枚举
+     * @param cryptTypeEnum 加密方式枚举
      * @return 机密方式实现类
      */
     public static Crypt getCrypt(CryptTypeEnum cryptTypeEnum) {
@@ -31,10 +30,8 @@ public class CryptContext {
     /**
      * 设置加密方式
      *
-     * @param cryptTypeEnum
-     *            加密类型
-     * @param crypt
-     *            加载方式
+     * @param cryptTypeEnum 加密类型
+     * @param crypt         加载方式
      */
     public static void setCrypt(CryptTypeEnum cryptTypeEnum, Crypt crypt) {
         Crypts.put(cryptTypeEnum, crypt);

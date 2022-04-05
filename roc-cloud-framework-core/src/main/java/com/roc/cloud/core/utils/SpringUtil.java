@@ -1,6 +1,7 @@
 package com.roc.cloud.core.utils;
 
 import java.util.Map;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.core.env.Environment;
@@ -23,28 +24,30 @@ public class SpringUtil implements ApplicationContextAware {
         return applicationContext.getBean(name, cal);
     }
 
-    public static <T> Map<String, T> getBeanOfType(Class<T> cal){
+    public static <T> Map<String, T> getBeanOfType(Class<T> cal) {
         return applicationContext.getBeansOfType(cal);
     }
-/**
- * getProperty
-* @param key :  
- *        
- * @return java.lang.String
- * @author Roc
- * @date 2020/9/30
- **/
+
+    /**
+     * getProperty
+     *
+     * @param key :
+     * @return java.lang.String
+     * @author Roc
+     * @date 2020/9/30
+     **/
     public static String getProperty(String key) {
         return applicationContext.getBean(Environment.class).getProperty(key);
     }
-/**
- * setApplicationContext
-* @param applicationContext :  
- *        
- * @return void
- * @author Roc
- * @date 2020/9/30
- **/
+
+    /**
+     * setApplicationContext
+     *
+     * @param applicationContext :
+     * @return void
+     * @author Roc
+     * @date 2020/9/30
+     **/
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) {
         SpringUtil.applicationContext = applicationContext;

@@ -14,8 +14,6 @@ import java.time.format.DateTimeFormatter;
  * @author: Roc
  * @date 2020/2/3
  * <p>
-
-
  */
 @Slf4j
 @ConditionalOnProperty(name = "roc.cloud.audit-log.log-type", havingValue = "logger", matchIfMissing = true)
@@ -39,7 +37,8 @@ public class LoggerAuditServiceImpl implements IAuditService {
 
     /**
      * 保存异常日志
-     *格式为：{时间}|{应用名}|{类名}|{方法名}|{用户id}|{用户名}|{租户id}|{操作信息}|{异常信息}
+     * 格式为：{时间}|{应用名}|{类名}|{方法名}|{用户id}|{用户名}|{租户id}|{操作信息}|{异常信息}
+     *
      * @param exceptionAudit :
      * @return void
      * @author yw
@@ -50,6 +49,6 @@ public class LoggerAuditServiceImpl implements IAuditService {
         log.debug(EXCEPTION_MSG_PATTERN, exceptionAudit.getTimestamp().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS"))
                 , exceptionAudit.getExApplicationName(), exceptionAudit.getExClassName(), exceptionAudit.getExMethodName()
                 , exceptionAudit.getUserId(), exceptionAudit.getUserName(), exceptionAudit.getCompanyId()
-                , exceptionAudit.getOperation(),exceptionAudit.getExceptionMsg());
+                , exceptionAudit.getOperation(), exceptionAudit.getExceptionMsg());
     }
 }

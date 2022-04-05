@@ -1,7 +1,7 @@
 package com.roc.cloud.core.utils;
 
-import com.roc.cloud.common.model.Result;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.roc.cloud.core.model.Result;
 import org.springframework.http.MediaType;
 
 import javax.servlet.http.HttpServletResponse;
@@ -16,6 +16,7 @@ public class ResponseUtil {
     private ResponseUtil() {
         throw new IllegalStateException("Utility class");
     }
+
     /**
      * 通过流写到前端
      *
@@ -32,6 +33,7 @@ public class ResponseUtil {
 
     /**
      * 通过流写到前端
+     *
      * @param objectMapper 对象序列化
      * @param response
      * @param obj
@@ -43,6 +45,7 @@ public class ResponseUtil {
 
     /**
      * 通过流写到前端
+     *
      * @param objectMapper
      * @param response
      * @param msg

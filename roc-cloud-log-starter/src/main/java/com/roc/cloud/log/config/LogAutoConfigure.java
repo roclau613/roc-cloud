@@ -15,15 +15,16 @@ import org.springframework.context.annotation.Configuration;
 @EnableConfigurationProperties({TraceProperties.class, AuditLogProperties.class})
 public class LogAutoConfigure {
 
-	/**
-	 * 日志数据库配置
-	 * @ConditionalOnClass(HikariConfig.class)
-	 * @author Roc
-	 * @date 2020/11/6
-	 **/
+    /**
+     * 日志数据库配置
+     *
+     * @author Roc
+     * @ConditionalOnClass(HikariConfig.class)
+     * @date 2020/11/6
+     **/
 
-	@Configuration
-	@EnableConfigurationProperties(LogDbProperties.class)
-	public static class LogDbAutoConfigure {
-	}
+    @Configuration
+    @EnableConfigurationProperties(LogDbProperties.class)
+    public static class LogDbAutoConfigure {
+    }
 }

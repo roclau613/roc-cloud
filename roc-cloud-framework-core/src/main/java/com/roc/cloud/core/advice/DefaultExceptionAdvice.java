@@ -107,7 +107,7 @@ public class DefaultExceptionAdvice {
     @ExceptionHandler(IOException.class)
     @ResponseStatus(HttpStatus.SERVICE_UNAVAILABLE)
     public Result ioExceptionHandler(IOException e, HttpServletRequest request) {
-       String errorMsg =  ExceptionUtils.getRootCauseMessage(e);
+        String errorMsg = ExceptionUtils.getRootCauseMessage(e);
         if (StringUtils.containsIgnoreCase(errorMsg, "Broken pipe")) {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);

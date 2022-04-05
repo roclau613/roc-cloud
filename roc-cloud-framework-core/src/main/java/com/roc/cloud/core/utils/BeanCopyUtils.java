@@ -5,6 +5,7 @@ import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.bean.copier.CopyOptions;
 import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.io.IoUtil;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -12,6 +13,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
+
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -47,7 +49,7 @@ public class BeanCopyUtils {
      * 将源POJO对象数据复制给目标POJO对象的同名属性
      *
      * @param source :
-     * @param clazz :
+     * @param clazz  :
      * @return T
      * @author Roc
      * @date 2020/11/3
@@ -62,7 +64,7 @@ public class BeanCopyUtils {
      * 将源POJO对象数据复制给目标POJO对象的同名属性
      *
      * @param source :
-     * @param clazz :
+     * @param clazz  :
      * @return T
      * @author Roc
      * @date 2020/11/3
@@ -76,8 +78,8 @@ public class BeanCopyUtils {
     /**
      * 将源POJO对象数据复制给目标POJO对象的同名属性
      *
-     * @param source 源
-     * @param target 目标
+     * @param source           源
+     * @param target           目标
      * @param ignoreProperties 无需转换的属性
      * @param <S>
      * @param <T>
@@ -96,8 +98,8 @@ public class BeanCopyUtils {
     /**
      * 将源POJO对象数据复制给目标POJO对象的同名属性
      *
-     * @param source 源
-     * @param target 目标
+     * @param source               源
+     * @param target               目标
      * @param ignoreNullProperties 是否无视null值字段（如果为true则无视）
      * @param <S>
      * @param <T>

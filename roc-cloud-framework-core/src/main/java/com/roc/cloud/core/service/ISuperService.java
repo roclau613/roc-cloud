@@ -2,7 +2,7 @@ package com.roc.cloud.core.service;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.roc.cloud.common.lock.DistributedLock;
+import com.roc.cloud.core.lock.DistributedLock;
 
 /**
  * service接口父类
@@ -10,8 +10,6 @@ import com.roc.cloud.common.lock.DistributedLock;
  * @author: Roc
  * @date 2019/1/10
  * <p>
-
-
  */
 public interface ISuperService<T> extends IService<T> {
     /**
@@ -19,8 +17,8 @@ public interface ISuperService<T> extends IService<T> {
      * 例子如下：
      * String username = sysUser.getUsername();
      * boolean result = super.saveIdempotency(sysUser, lock
-     *                 , LOCK_KEY_USERNAME+username
-     *                 , new QueryWrapper<SysUser>().eq("username", username));
+     * , LOCK_KEY_USERNAME+username
+     * , new QueryWrapper<SysUser>().eq("username", username));
      *
      * @param entity       实体对象
      * @param locker       锁实例
@@ -30,17 +28,18 @@ public interface ISuperService<T> extends IService<T> {
      * @return
      */
     boolean saveIdempotency(T entity, DistributedLock locker, String lockKey, Wrapper<T> countWrapper, String msg) throws Exception;
-/**
- * saveIdempotency
-* @param entity : 
- * @param locker : 
- * @param lockKey : 
- * @param countWrapper :  
- *        
- * @return boolean
- * @author Roc
- * @date 2020/9/30
- **/
+
+    /**
+     * saveIdempotency
+     *
+     * @param entity       :
+     * @param locker       :
+     * @param lockKey      :
+     * @param countWrapper :
+     * @return boolean
+     * @author Roc
+     * @date 2020/9/30
+     **/
     boolean saveIdempotency(T entity, DistributedLock locker, String lockKey, Wrapper<T> countWrapper) throws Exception;
 
     /**
@@ -48,8 +47,8 @@ public interface ISuperService<T> extends IService<T> {
      * 例子如下：
      * String username = sysUser.getUsername();
      * boolean result = super.saveOrUpdateIdempotency(sysUser, lock
-     *                 , LOCK_KEY_USERNAME+username
-     *                 , new QueryWrapper<SysUser>().eq("username", username));
+     * , LOCK_KEY_USERNAME+username
+     * , new QueryWrapper<SysUser>().eq("username", username));
      *
      * @param entity       实体对象
      * @param locker       锁实例

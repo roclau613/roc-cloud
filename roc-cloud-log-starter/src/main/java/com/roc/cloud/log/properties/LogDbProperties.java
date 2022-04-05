@@ -12,8 +12,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @author: Roc
  * @date 2020/2/8
  * <p>
-
-
  */
 @Setter
 @Getter

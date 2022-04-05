@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.MediaType;
 
@@ -26,18 +27,18 @@ public class BodyReaderFilter implements Filter {
     /**
      * 转换请求对象
      *
-     * @param request :
+     * @param request  :
      * @param response :
-     * @param chain :
+     * @param chain    :
      * @return void
      * @Author: Roc
      * @date: 2020/11/21
      **/
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
-        throws IOException, ServletException {
+            throws IOException, ServletException {
         if (request instanceof HttpServletRequest && StringUtils
-            .contains(request.getContentType(), MediaType.APPLICATION_JSON_VALUE)) {
+                .contains(request.getContentType(), MediaType.APPLICATION_JSON_VALUE)) {
             ServletRequest requestWrapper = new BodyReaderHttpServletRequestWrapper((HttpServletRequest) request);
             chain.doFilter(requestWrapper, response);
         } else {

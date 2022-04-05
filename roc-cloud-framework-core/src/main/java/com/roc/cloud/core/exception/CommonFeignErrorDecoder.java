@@ -2,10 +2,13 @@ package com.roc.cloud.core.exception;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.roc.cloud.core.model.CodeEnum;
 import feign.Response;
 import feign.Util;
 import feign.codec.ErrorDecoder;
+
 import java.util.Objects;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
 

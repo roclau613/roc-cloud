@@ -1,6 +1,7 @@
 package com.roc.cloud.core.lock;
 
 import cn.hutool.core.util.StrUtil;
+import com.roc.cloud.core.exception.PlatformApiException;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;

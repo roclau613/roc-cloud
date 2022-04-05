@@ -14,7 +14,7 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * 分布式高效有序ID生成器
  * 优化开源项目：http://git.oschina.net/yu120/sequence
- *
+ * <p>
  * Twitter_Snowflake<br>
  * SnowFlake的结构如下(每部分用-分开):<br>
  * 0 - 0000000000 0000000000 0000000000 0000000000 0 - 00000 - 00000 -
@@ -75,14 +75,14 @@ public class Sequence {
      * 时间回拨最长时间(ms)，超过这个时间就抛出异常
      */
     private long timestampOffset = 5L;
-/**
- * Sequence
- 
- *        
- * @return 
- * @author Roc
- * @date 2020/9/30
- **/
+
+    /**
+     * Sequence
+     *
+     * @return
+     * @author Roc
+     * @date 2020/9/30
+     **/
     public Sequence() {
         this.datacenterId = getDatacenterId(maxDatacenterId);
         this.workerId = getMaxWorkerId(datacenterId, maxWorkerId);

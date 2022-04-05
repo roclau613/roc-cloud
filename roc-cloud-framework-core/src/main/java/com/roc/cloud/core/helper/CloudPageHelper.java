@@ -4,8 +4,8 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.github.pagehelper.page.PageMethod;
-import com.roc.cloud.common.model.PageParam;
-import com.roc.cloud.common.model.PageResult;
+import com.roc.cloud.core.model.PageParam;
+import com.roc.cloud.core.model.PageResult;
 
 /**
  * 统一分页处理逻辑
@@ -34,7 +34,7 @@ public class CloudPageHelper extends PageHelper {
     /**
      * 开始调用分页插件-单个值
      *
-     * @param pageNum : 页码
+     * @param pageNum  : 页码
      * @param pageSize : 页数量
      * @return com.github.pagehelper.Page<E>
      * @author Roc

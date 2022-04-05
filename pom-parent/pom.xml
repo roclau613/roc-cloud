@@ -104,11 +104,11 @@
     <dependencyManagement>
         <dependencies>
 
-            <dependency>
-                <groupId>org.codehaus.janino</groupId>
-                <artifactId>janino</artifactId>
-                <version>3.1.6</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.codehaus.janino</groupId>-->
+<!--                <artifactId>janino</artifactId>-->
+<!--                <version>3.1.6</version>-->
+<!--            </dependency>-->
 
             <dependency>
                 <groupId>com.github.jsqlparser</groupId>
@@ -152,11 +152,11 @@
 <!--                <version>${skywalking.toolkit.version}</version>-->
 <!--            </dependency>-->
 
-<!--            <dependency>-->
-<!--                <groupId>commons-beanutils</groupId>-->
-<!--                <artifactId>commons-beanutils</artifactId>-->
-<!--                <version>${commons-beanutils.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${commons-beanutils.version}</version>
+            </dependency>
 
             <!-- 必须有这个jar 才能提示 -->
             <dependency>
@@ -314,17 +314,17 @@
 <!--            </dependency>-->
 
             <!-- druid 官方 starter -->
-<!--            <dependency>-->
-<!--                <groupId>com.alibaba</groupId>-->
-<!--                <artifactId>druid-spring-boot-starter</artifactId>-->
-<!--                <version>${druid-starter}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-starter}</version>
+            </dependency>
 <!--            &lt;!&ndash; mybatis-plus start &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>com.baomidou</groupId>-->
-<!--                <artifactId>mybatis-plus-boot-starter</artifactId>-->
-<!--                <version>${mybatis-plus-boot-starter.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-boot-starter.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-extension</artifactId>
@@ -338,11 +338,11 @@
             </dependency>
 
             <!-- 解决mybatis 和 LocalDateTime 的问题 -->
-<!--            <dependency>-->
-<!--                <groupId>org.mybatis</groupId>-->
-<!--                <artifactId>mybatis-typehandlers-jsr310</artifactId>-->
-<!--                <version>1.0.2</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-typehandlers-jsr310</artifactId>
+                <version>1.0.2</version>
+            </dependency>
 
 
             <!-- 加入spring security spring security oauth2的处理 -->
@@ -357,17 +357,16 @@
             <!--                <version>${security-jwt.version}</version>-->
             <!--            </dependency>-->
             <!-- 在Redis基础上的一个Java实用工具包 -->
-<!--            <dependency>-->
-<!--                <groupId>org.redisson</groupId>-->
-<!--                <artifactId>redisson-spring-boot-starter</artifactId>-->
-<!--                <version>${redisson-starter.version}</version>-->
-<!--            </dependency>-->
-<!--            &lt;!&ndash; swagger &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>io.springfox</groupId>-->
-<!--                <artifactId>springfox-swagger2</artifactId>-->
-<!--                <version>${swagger.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
 <!--            <dependency>-->
 <!--                <groupId>io.springfox</groupId>-->
 <!--                <artifactId>springfox-bean-validators</artifactId>-->
@@ -533,11 +532,11 @@
 <!--                <artifactId>knife4j-spring-boot-starter</artifactId>-->
 <!--                <version>${knife4j.version}</version>-->
 <!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.github.xiaoymin</groupId>-->
-<!--                <artifactId>knife4j-micro-spring-boot-starter</artifactId>-->
-<!--                <version>${knife4j.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-micro-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>

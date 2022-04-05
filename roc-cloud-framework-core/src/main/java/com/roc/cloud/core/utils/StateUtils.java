@@ -7,7 +7,7 @@ public class StateUtils {
      * @param value  需要判断状态值
      * @return 是否存在
      */
-    public static boolean hasState(long states,long value){
+    public static boolean hasState(long states, long value) {
         return (states & value) == value;
     }
 
@@ -16,8 +16,8 @@ public class StateUtils {
      * @param value  需要添加状态值
      * @return 新的状态值
      */
-    public static long addState(long states,long value){
-        if(hasState(states, value)){
+    public static long addState(long states, long value) {
+        if (hasState(states, value)) {
             return states;
         }
         return (states | value);
@@ -28,8 +28,8 @@ public class StateUtils {
      * @param value  需要删除状态值
      * @return 新的状态值
      */
-    public static long removeState(long states,long value){
-        if(!hasState(states, value)){
+    public static long removeState(long states, long value) {
+        if (!hasState(states, value)) {
             return states;
         }
         return states ^ value;

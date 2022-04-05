@@ -10,9 +10,9 @@ public class IdempotencyException extends RuntimeException {
 
     /**
      * 设置message值
-    * @param message :  
-     *        
-     * @return 
+     *
+     * @param message :
+     * @return
      * @author Roc
      * @date 2020/9/30
      **/

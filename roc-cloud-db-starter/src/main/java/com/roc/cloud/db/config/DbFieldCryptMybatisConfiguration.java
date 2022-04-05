@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
  **/
 @Slf4j
 @Configuration
-@ConditionalOnProperty(prefix = "roc.cloud.db.crypt",name = "enabled", havingValue = "true", matchIfMissing = true)
+@ConditionalOnProperty(prefix = "roc.cloud.db.crypt", name = "enabled", havingValue = "true", matchIfMissing = true)
 public class DbFieldCryptMybatisConfiguration {
 
 

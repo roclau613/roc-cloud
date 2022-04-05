@@ -13,8 +13,8 @@ public abstract class AbstractLogEnhancer implements LogEnhancer {
 
     /**
      * 抽象enhance
-     * @param config :
      *
+     * @param config :
      * @return void
      * @author Roc
      * @date 2020/9/30
@@ -23,7 +23,7 @@ public abstract class AbstractLogEnhancer implements LogEnhancer {
     public void enhance(LogAppenderConfig config) {
 
         try {
-            if(!hasBeanEnhanced()) {
+            if (!hasBeanEnhanced()) {
                 doEnhance(config);
             }
         } catch (Exception e) {

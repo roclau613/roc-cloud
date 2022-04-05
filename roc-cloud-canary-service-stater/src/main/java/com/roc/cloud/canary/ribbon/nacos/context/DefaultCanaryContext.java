@@ -19,7 +19,7 @@ public class DefaultCanaryContext implements CanaryContext {
     /**
      * Adds the context attribute.
      *
-     * @param key the attribute key
+     * @param key   the attribute key
      * @param value the attribute value
      */
     @Override

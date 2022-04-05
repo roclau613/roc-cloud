@@ -99,29 +99,29 @@ public class AuditLogAspect {
         }
     }
 
-    @AfterThrowing(value = "@within(auditLog) || @annotation(auditLog)",throwing = "e")
-    public void afterMethod(JoinPoint joinPoint, AuditLog auditLog,Throwable e){
+    @AfterThrowing(value = "@within(auditLog) || @annotation(auditLog)", throwing = "e")
+    public void afterMethod(JoinPoint joinPoint, AuditLog auditLog, Throwable e) {
         //判断是否开启用户异常日志
-        if(!auditLogProperties.getExceptionEnabled()){
+        if (!auditLogProperties.getExceptionEnabled()) {
             return;
         }
 
         //获取RequestAttributes
         RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
-        HttpServletRequest request = (HttpServletRequest)requestAttributes.resolveReference(RequestAttributes.REFERENCE_REQUEST);
+        HttpServletRequest request = (HttpServletRequest) requestAttributes.resolveReference(RequestAttributes.REFERENCE_REQUEST);
         //判断 是否有用户信息
         JSONObject headObjects = findLoginUserByToken(request);
         if (Objects.isNull(headObjects)) {
-            return ;
+            return;
         }
         //获取织入点的方法
-        MethodSignature methodSignature = (MethodSignature)joinPoint.getSignature();
+        MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
         //获取所在的方法
         Method method = methodSignature.getMethod();
         //类名
         String className = joinPoint.getTarget().getClass().getName();
         String methodName = method.getName();
-        methodName = className + "." +methodName;
+        methodName = className + "." + methodName;
         String operation = auditLog.operation();
         if (operation.contains(WELL)) {
             //获取方法参数值
@@ -143,8 +143,8 @@ public class AuditLogAspect {
         exceptionAudit.setExClassName(className);
         exceptionAudit.setExMethodName(methodName);
         exceptionAudit.setExApplicationName(applicationName);
-        exceptionAudit.setExceptionMsg(stackTraceToString(e.getClass().getName(),e.getMessage(),e.getStackTrace()));
-        exceptionAudit.setIp(IpUtil.getIpAddr(request));
+        exceptionAudit.setExceptionMsg(stackTraceToString(e.getClass().getName(), e.getMessage(), e.getStackTrace()));
+//        exceptionAudit.setIp(IpUtil.getIpAddr(request));
         exceptionAudit.setIndexName("audit_log_exception");
         exceptionAudit.setTimestamp(LocalDateTime.now());
         auditService.save(exceptionAudit);
@@ -152,29 +152,28 @@ public class AuditLogAspect {
 
     /**
      * 转换request请求
-     *
      */
-    public Map<String,String> convertMap(Map<String,String[]> stringMap){
-        Map<String,String> map = new HashMap<>(16);
-        for(String key : stringMap.keySet()){
-            map.put(key,stringMap.get(key)[0]);
+    public Map<String, String> convertMap(Map<String, String[]> stringMap) {
+        Map<String, String> map = new HashMap<>(16);
+        for (String key : stringMap.keySet()) {
+            map.put(key, stringMap.get(key)[0]);
         }
         return map;
     }
 
     /**
      * 转换一场信息为字符串
-     * @param exceptionName :
-     * @param exceptionMsg :
-     * @param elements :
      *
+     * @param exceptionName :
+     * @param exceptionMsg  :
+     * @param elements      :
      * @return java.lang.String
      * @author yw
      * @date 2021/2/2
      */
-    public String stackTraceToString(String exceptionName,String exceptionMsg,StackTraceElement[] elements){
+    public String stackTraceToString(String exceptionName, String exceptionMsg, StackTraceElement[] elements) {
         StringBuilder stringBuilder = new StringBuilder();
-        for(StackTraceElement  element : elements){
+        for (StackTraceElement element : elements) {
             stringBuilder.append(element + "\n");
         }
         String msg = exceptionName + ":" + exceptionMsg + "\n\t" + stringBuilder.toString();
@@ -214,8 +213,8 @@ public class AuditLogAspect {
 
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
-        String ipAddr = IpUtil.getIpAddr(request);
-        audit.setIp(ipAddr);
+//        String ipAddr = IpUtil.getIpAddr(request);
+//        audit.setIp(ipAddr);
         JSONObject headObjects = findLoginUserByToken(request);
         if (Objects.isNull(headObjects)) {
             return null;

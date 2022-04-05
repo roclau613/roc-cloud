@@ -2,8 +2,11 @@ package com.roc.cloud.canary.ribbon.nacos.interceptor;
 
 import com.roc.cloud.canary.ribbon.nacos.context.CanaryContext;
 import com.roc.cloud.canary.ribbon.nacos.context.CanaryFilterContextHolder;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.roc.cloud.common.constant.HeaderConstant;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.servlet.HandlerInterceptor;

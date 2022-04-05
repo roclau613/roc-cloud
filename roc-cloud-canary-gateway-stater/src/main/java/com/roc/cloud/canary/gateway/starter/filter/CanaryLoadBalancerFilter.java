@@ -7,7 +7,10 @@ import static org.springframework.cloud.gateway.support.ServerWebExchangeUtils.a
 
 import com.roc.cloud.canary.gateway.starter.balancer.CanaryLoadBalancer;
 import com.roc.cloud.canary.gateway.starter.tenant.TenantService;
+
 import java.net.URI;
+
+import com.roc.cloud.common.constant.HeaderConstant;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

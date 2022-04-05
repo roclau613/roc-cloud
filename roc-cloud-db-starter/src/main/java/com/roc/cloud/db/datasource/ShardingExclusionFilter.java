@@ -3,6 +3,7 @@ package com.roc.cloud.db.datasource;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+
 import org.springframework.boot.autoconfigure.AutoConfigurationImportFilter;
 import org.springframework.boot.autoconfigure.AutoConfigurationMetadata;
 
@@ -22,7 +23,7 @@ public class ShardingExclusionFilter implements AutoConfigurationImportFilter {
     public boolean[] match(String[] classNames, AutoConfigurationMetadata metadata) {
         boolean[] matches = new boolean[classNames.length];
 
-        for(int i = 0; i< classNames.length; i++) {
+        for (int i = 0; i < classNames.length; i++) {
             matches[i] = !SHOULD_SKIP.contains(classNames[i]);
         }
         return matches;

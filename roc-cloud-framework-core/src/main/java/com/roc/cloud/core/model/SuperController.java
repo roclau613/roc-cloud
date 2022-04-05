@@ -2,15 +2,14 @@ package com.roc.cloud.core.model;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.roc.cloud.common.constant.SecurityConstants;
-import com.roc.cloud.common.utils.HttpServletUtils;
-
-import java.util.List;
-import java.util.Objects;
-
+import com.roc.cloud.core.constant.SecurityConstants;
+import com.roc.cloud.core.utils.HttpServletUtils;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+
+import java.util.List;
+import java.util.Objects;
 
 /**
  * 实体父类
@@ -47,19 +46,19 @@ public class SuperController {
     private static final String TYPE = "type";
 
     /**
-    * loginUserDto 的字段名
-    **/
-    private static final String WX_OPEN_ID ="wxOpenId";
+     * loginUserDto 的字段名
+     **/
+    private static final String WX_OPEN_ID = "wxOpenId";
 
     /**
-    * loginUserDto 的字段名
-    **/
-    private static final String THIRD_APP_ID ="thirdAppId";
+     * loginUserDto 的字段名
+     **/
+    private static final String THIRD_APP_ID = "thirdAppId";
 
     /**
-    * 小程序sessionKey
-    **/
-    private static final String WX_SESSION_KEY ="wxSessionKey";
+     * 小程序sessionKey
+     **/
+    private static final String WX_SESSION_KEY = "wxSessionKey";
 
     /**
      * loginUserDto 校区列表字段名
@@ -162,15 +161,15 @@ public class SuperController {
     }
 
     /**
-    * 获取登录的用户对象
-    **/
-    public JSONObject getLoginUser(){
+     * 获取登录的用户对象
+     **/
+    public JSONObject getLoginUser() {
         return findLoginUserByToken();
     }
 
     private JSONObject findLoginUserByToken() {
         String headerValue = Objects.requireNonNull(HttpServletUtils.getRequest(), "request not be null")
-            .getHeader(SecurityConstants.ROC_LOGIN_HEADER);
+                .getHeader(SecurityConstants.ROC_LOGIN_HEADER);
         if (StringUtils.isNotBlank(headerValue)) {
             JSONObject loginUser = JSON.parseObject(headerValue);
             if (Objects.nonNull(loginUser)) {

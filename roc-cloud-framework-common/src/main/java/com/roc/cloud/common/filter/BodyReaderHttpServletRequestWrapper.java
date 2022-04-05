@@ -15,6 +15,7 @@ import javax.servlet.ReadListener;
 import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
+
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 
@@ -45,7 +46,7 @@ public class BodyReaderHttpServletRequestWrapper extends HttpServletRequestWrapp
     public BodyReaderHttpServletRequestWrapper(HttpServletRequest request) throws IOException {
         super(request);
         body = IOUtils.toByteArray(new BufferedReader(new InputStreamReader(request.getInputStream(), StandardCharsets.UTF_8)),
-            StandardCharsets.UTF_8);
+                StandardCharsets.UTF_8);
         this.customHeaders = new ConcurrentHashMap<>();
         Enumeration<String> headerNames = request.getHeaderNames();
         String headerKey = "";

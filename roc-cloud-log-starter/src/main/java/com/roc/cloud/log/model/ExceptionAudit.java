@@ -90,5 +90,5 @@ public class ExceptionAudit {
     /**
      * 异常信息
      */
-    private  String exceptionMsg;
+    private String exceptionMsg;
 }

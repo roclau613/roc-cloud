@@ -62,35 +62,37 @@ public class DateMetaObjectHandler implements MetaObjectHandler {
      */
     @Override
     public void updateFill(MetaObject metaObject) {
-        setFieldValByName(autoFillProperties.getUpdateTimeField(),getNow(getFieldTypeByName(autoFillProperties.getUpdateTimeField(), metaObject)), metaObject);
+        setFieldValByName(autoFillProperties.getUpdateTimeField(), getNow(getFieldTypeByName(autoFillProperties.getUpdateTimeField(), metaObject)), metaObject);
     }
 
     /**
      * 获取MetaObject字段类型
-     * @param fieldName :
+     *
+     * @param fieldName  :
      * @param metaObject :
-     * @return  * @return : java.lang.Class<?>
+     * @return * @return : java.lang.Class<?>
      * @author Jewei
      * @date 2021/2/2 10:37
      **/
-    private Class<?> getFieldTypeByName(String fieldName, MetaObject metaObject){
+    private Class<?> getFieldTypeByName(String fieldName, MetaObject metaObject) {
         return metaObject.hasGetter(fieldName) ? metaObject.getGetterType(fieldName) : null;
     }
+
     /**
-     *根据类型获取当前时间
+     * 根据类型获取当前时间
+     *
      * @param cls :
-     * @return  * @return : java.lang.Object
+     * @return * @return : java.lang.Object
      * @author Jewei
      * @date 2021/2/2 10:21
      **/
-    private Object getNow(Class<?> cls){
-        if(cls==null){
+    private Object getNow(Class<?> cls) {
+        if (cls == null) {
             return null;
         }
-        if(cls.equals(LocalDateTime.class)){
+        if (cls.equals(LocalDateTime.class)) {
             return LocalDateTime.now();
-        }
-        else {
+        } else {
             return new Date();
         }
     }

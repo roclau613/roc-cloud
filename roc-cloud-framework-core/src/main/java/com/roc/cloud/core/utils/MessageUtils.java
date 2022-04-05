@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * 国际化转换工具类 MessageUtils
+ *
  * @date: 2020/10/13
  * @author: xdli
  * @since: 1.0
@@ -25,8 +26,8 @@ public class MessageUtils {
 
     /**
      * 根据key获取国际化转换值
-     * @param msgKey :国际化key
      *
+     * @param msgKey :国际化key
      * @return java.lang.String
      * @author xdli
      * @date 2020/10/13
@@ -35,7 +36,7 @@ public class MessageUtils {
         try {
             return messageSource.getMessage(msgKey, null, LocaleContextHolder.getLocale());
         } catch (Exception e) {
-            log.error("国际化key转换失败",e);
+            log.error("国际化key转换失败", e);
             return msgKey;
         }
     }

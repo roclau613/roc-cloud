@@ -3,6 +3,7 @@ package com.roc.cloud.canary.ribbon.nacos.config;
 import com.roc.cloud.canary.ribbon.nacos.interceptor.CanaryRestInterceptor;
 
 import java.util.Collections;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContextInitializer;

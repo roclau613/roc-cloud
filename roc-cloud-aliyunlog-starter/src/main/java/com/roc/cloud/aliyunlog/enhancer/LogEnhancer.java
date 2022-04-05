@@ -11,24 +11,22 @@ import com.roc.cloud.aliyunlog.config.LogAppenderConfig;
 public interface LogEnhancer {
 
     /**
+     * @param
+     * @return boolean
      * @description: 判断是否已经绑定阿里云SDK <br>
      * @version: 1.0 <br>
      * @date: 2020/9/8 14:38 <br>
      * @author: @author: Roc <br>
-     *
-     * @param
-     * @return boolean
      */
     boolean alreadyBound();
 
     /**
+     * @param config
+     * @return void
      * @description: 接入阿里云日志服务 <br>
      * @version: 1.0 <br>
      * @date: 2020/9/8 14:35 <br>
      * @author: @author: Roc <br>
-     *
-     * @param config
-     * @return void
      */
     void enhance(LogAppenderConfig config);
 

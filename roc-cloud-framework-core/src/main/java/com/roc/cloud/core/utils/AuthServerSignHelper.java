@@ -1,7 +1,9 @@
 package com.roc.cloud.core.utils;
+
 import java.nio.charset.Charset;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -18,10 +20,11 @@ public class AuthServerSignHelper {
     private static final Log log = LogFactory.getLog(AuthServerSignHelper.class);
     private static final String HMAC_SHA_256 = "HmacSHA256";
     private static String CharsetConstant = "UTF-8";
+
     /**
      * 通过appid加密
      *
-     * @param appId : 应用ID
+     * @param appId  : 应用ID
      * @param appKey : 应用密钥key
      * @return java.lang.String
      * @author Roc
@@ -30,10 +33,11 @@ public class AuthServerSignHelper {
     public static String signByAppId(String appId, String appKey) {
         return sign(appId + appKey, appKey);
     }
+
     /**
      * sha256_HMAC加密
      *
-     * @param body 签名消息体
+     * @param body   签名消息体
      * @param secret 秘钥
      * @return 加密后字符串
      */
@@ -50,6 +54,7 @@ public class AuthServerSignHelper {
         }
         return hash;
     }
+
     /**
      * 生成密钥
      *
@@ -58,8 +63,9 @@ public class AuthServerSignHelper {
      * @date 2021/1/6
      **/
     public static String generateAppKey(String appId) {
-        return signByAppId("1",System.currentTimeMillis()+"").substring(32);
+        return signByAppId("1", System.currentTimeMillis() + "").substring(32);
     }
+
     /**
      * 将加密后的字节数组转换成字符串
      *

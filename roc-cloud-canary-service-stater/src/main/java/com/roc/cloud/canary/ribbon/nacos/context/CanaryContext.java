@@ -12,7 +12,7 @@ public interface CanaryContext {
     /**
      * Adds the context attribute.
      *
-     * @param key the attribute key
+     * @param key   the attribute key
      * @param value the attribute value
      * @return the context instance
      */

@@ -33,7 +33,9 @@ import com.alibaba.druid.sql.ast.statement.SQLUpdateStatement;
 import com.alibaba.druid.sql.dialect.mysql.ast.statement.MySqlDeleteStatement;
 import com.alibaba.druid.sql.dialect.mysql.ast.statement.MySqlInsertStatement;
 import com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser;
+
 import java.util.List;
+
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -49,7 +51,7 @@ public class ReplaceSql {
      * SQL 添加 schema
      *
      * @param schemaName :
-     * @param sql :
+     * @param sql        :
      * @return java.lang.String
      * @author Roc
      * @date 22:07 2020/9/9

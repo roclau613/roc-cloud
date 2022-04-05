@@ -26,8 +26,8 @@ public class CanaryGatewayConfiguration {
      * 初始化灰度过滤器
      *
      * @param loadBalancerClientFactory :
-     * @param loadBalancerProperties :
-     * @param applicationContext : 租户服务
+     * @param loadBalancerProperties    :
+     * @param applicationContext        : 租户服务
      * @return
      * @author Roc
      * @date 9:27 2020/9/21
@@ -39,7 +39,7 @@ public class CanaryGatewayConfiguration {
         TenantService tenantService = null;
         try {
             tenantService = applicationContext.getBean(TenantService.class);
-        }catch (BeansException e){
+        } catch (BeansException e) {
             log.warn("当前环境未启用租户组件");
         }
         return new CanaryLoadBalancerFilter(loadBalancerClientFactory, loadBalancerProperties, tenantService);

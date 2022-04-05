@@ -1,6 +1,7 @@
 package com.roc.cloud.db.entity;
 
 import java.io.Serializable;
+
 import lombok.Data;
 
 /**

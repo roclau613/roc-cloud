@@ -38,7 +38,7 @@ public enum CodeEnum {
 
     DEFAULT_ERROR(60000, "默认错误码"),
 
-  ;
+    ;
 
     private Integer code;
 
@@ -47,7 +47,7 @@ public enum CodeEnum {
     /**
      * CodeEnum
      *
-     * @param code :
+     * @param code    :
      * @param message :
      * @return
      * @author Roc
