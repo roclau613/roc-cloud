@@ -1,6 +1,6 @@
 package com.roc.cloud.core.utils;
 
-public class StateUtils {
+public class BitwiseStateUtils {
 
     /**
      * @param states 用户当前状态值
@@ -8,7 +8,7 @@ public class StateUtils {
      * @return 是否存在
      */
     public static boolean hasState(long states, long value) {
-        return (states & value) == value;
+        return (states & value) != 0;
     }
 
     /**
