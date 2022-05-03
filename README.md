@@ -1,4 +1,4 @@
-# roc-cloud-framework-jar 核心常用jar包
+# roc-cloud-framework-jar 基础jar包
 
 # roc-cloud-framework-service 基础微服务
 
