@@ -215,37 +215,6 @@ public class CommonConstant {
         read.close();
     }
 
-
-    //1
-    //C.Users.zhangling.IdeaProjects.file
-    //2
-    //C.Users.zhangling.IdeaProjects.live
-    //3
-    //C.Users.zhangling.IdeaProjects.message
-    //4
-    //C.Users.zhangling.IdeaProjects.OpenWeixinServer
-    //5
-    //C.Users.zhangling.IdeaProjects.OpenWeixinServer1
-    //6
-    //C.Users.zhangling.IdeaProjects.pay
-    //7
-    //C.Users.zhangling.IdeaProjects.testzl
-    //8
-    //C.Users.zhangling.IdeaProjects.untitled
-    //9
-    //C.Users.zhangling.IdeaProjects.workwx
-    //10
-    //C.Users.zhangling.IdeaProjects.XGJ.Pay
-    //11
-    //C.Users.zhangling.IdeaProjects.xiaogj-authorization
-    //12
-    //C.Users.zhangling.IdeaProjects.xiaogj-live-server1
-    //13
-    //C.Users.zhangling.IdeaProjects.yunke
-    //14
-    //C.Users.zhangling.IdeaProjects.yunpan-server
-    //15
-    //C.Users.zhangling.IdeaProjects.zt
     public static void make(File file) throws IOException {
         if (file.isDirectory()) {
             String lastFile = file.getPath().substring(file.getPath().lastIndexOf("\\") + 1);
